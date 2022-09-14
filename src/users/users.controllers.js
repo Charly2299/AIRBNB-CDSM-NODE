@@ -122,6 +122,8 @@ const editProfileImg = async (userID, imgUrl) => {
   return data;
 };
 
+
+
 const getUserWithRole = async (userId) => {
   const data = await Users.findOne({
     where: {

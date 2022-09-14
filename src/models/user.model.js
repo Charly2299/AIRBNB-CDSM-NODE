@@ -2,6 +2,7 @@ const { DataTypes } = require("sequelize");
 
 const { db } = require("../utils/database");
 
+//CRERACION DE TABLA USERS
 const Users = db.define("users", {
   id: {
     primaryKey: true,

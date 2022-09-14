@@ -29,6 +29,8 @@ db.authenticate()
   .then(() => console.log('Database Authenticated'))
   .catch(err => console.log(err))
 
+  //SABER EN QUE ESTADO  ESTAN UESTRA APLICACION Y FORZAR O NO LOS MODELOS DE BD
+
 if(process.env.NODE_ENV === 'production'){
   db.sync() 
     .then(() => {

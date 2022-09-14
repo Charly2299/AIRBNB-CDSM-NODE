@@ -9,6 +9,8 @@ const Roles = require("./roles.model");
 const initModels = () => {
 
   //? Users <- Roles
+
+  //UN ROL TIENE MUCHOS USUARIOS Y UN USUARIO  TIENE UN ROL
   Roles.hasMany(Users);
   Users.belongsTo(Roles);
 
@@ -35,6 +37,7 @@ const initModels = () => {
   Places.hasMany(Accommodations);
 
   //? User -> Acommodations (Host)
+  //UN USUARIO ES DUENO DE MUCHOS LUGARES  Y UN LUGAR PERTENECE A UN USUARIO
   Users.hasMany(Accommodations)
   Accommodations.belongsTo(Users)
 };

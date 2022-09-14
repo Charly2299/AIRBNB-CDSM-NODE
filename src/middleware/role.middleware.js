@@ -1,5 +1,7 @@
 const Role = require("../models/roles.model");
 
+//VERIFICAR SI ELUSUARIO LOGEADO ES ADMIN 
+
 const roleAdminMiddleware = (req, res, next) => {
     Role.findOne({
         where: {
@@ -26,6 +28,7 @@ const roleAdminMiddleware = (req, res, next) => {
         })
     );
 };
+//VERIFICAR SI ELUSUARIO LOGEADO ES HOST
 
 const roleHostMiddleware = (req, res, next) => {
     Role.findOne({
