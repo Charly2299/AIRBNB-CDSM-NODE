@@ -29,6 +29,19 @@ const createReservation = async(data, userId, accommodationId) => {
 }
 
 
+
+const updateReservation=async(data,reservationId)=>{
+const {id, ...restOfData}=data
+
+const response =await Reservation.update(restOfData,{
+    where:{
+        id:reservationId
+    }
+})
+return response
+}
+
+
 module.exports = {
     createReservation,
     getAllReservations
