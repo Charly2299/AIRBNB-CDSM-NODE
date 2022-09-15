@@ -6,7 +6,7 @@ const db = new Sequelize({
   host: 'localhost',
   username: 'postgres',
   password: 'root',
-  database: 'airbnb',
+  database: 'airbnb_cdsm',
 
 });
 
