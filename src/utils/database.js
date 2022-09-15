@@ -9,6 +9,8 @@ const { Sequelize } = require('sequelize');
 //   database: 'airbnb',
 
 // });
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
 
 const db = new Sequelize({
   dialect: 'postgres',
