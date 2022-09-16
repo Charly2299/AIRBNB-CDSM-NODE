@@ -25,6 +25,8 @@ const app = express();
 
 initModels()
 
+const PORT = process.env.PORT || 8000
+
 db.authenticate()
   .then(() => console.log('Database Authenticated'))
   .catch(err => console.log(err))
@@ -101,7 +103,7 @@ app.get("/ejemplo",
   }
 );
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log("Server started at port 8000");
 });
 
